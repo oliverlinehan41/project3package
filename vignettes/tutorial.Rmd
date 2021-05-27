@@ -1,8 +1,9 @@
 ---
 title: "Project 3: project3package Turorial"
+author: "Oliver Linehan"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Project 3: project3package Turorial}
+  %\VignetteIndexEntry{project3package Turorial}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

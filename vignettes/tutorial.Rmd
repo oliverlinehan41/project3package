@@ -15,6 +15,11 @@ knitr::opts_chunk$set(
 )
 ```
 
+This is a compilation of various topics I have learned in Stat 302. It includes functions regarding hypothesis testing, linear modeling, and statistical prediction. You can use the following code to install project3package:
+```{r, eval=FALSE}
+install.packages("project3package")
+```
+
 ```{r setup}
 library(project3package)
 ```

@@ -1,11 +1,11 @@
 Package: project3package
-Title: Collection of Lab Functions From Stat 302 Class
+Title: Collection of Lab Functions from Stat 302 Class
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Oliver",
+           family = "Linehan",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "olinehan@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: This package is a collection of functions that I have made during labs in Stat 302. The purpose of this 
              package is to demonstrate what I have learned from this course.

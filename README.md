@@ -15,6 +15,17 @@ You can install the released version of project3package from [CRAN](https://CRAN
 install.packages("project3package")
 ```
 
+To view the vignette:
+``` r
+devtools::install_github("oliverlinehan41/project3package", build_vignette= TRUE, build_opts = c())
+library(project3package)
+# Use this to view vignette in the HTML help
+help(package = "project3package", help_type = "html")
+# Use this to view vignette as an isolated HTML file
+utils::browseVignettes(package = "project3package")
+
+```
+
 ## Example
 
 This is a basic example which shows you how to solve a common problem:

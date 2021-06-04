@@ -5,7 +5,7 @@
 [![R-CMD-check](https://github.com/oliverlinehan41/project3package/workflows/R-CMD-check/badge.svg)](https://github.com/oliverlinehan41/project3package/actions)
 <!-- badges: end -->
 
-The goal of project3package is to ...
+The goal of project3package is to demonstrate knowledge of concepts I learned throughout the Stat 302 course.
 
 ## Installation
 
@@ -28,10 +28,10 @@ utils::browseVignettes(package = "project3package")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to solve a common problem: Raising a number to a power
 
 ``` r
 library(project3package)
-## basic example code
+my_pow(2)
 ```
 

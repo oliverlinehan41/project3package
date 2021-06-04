@@ -5,8 +5,7 @@ Authors@R:
     person(given = "Oliver",
            family = "Linehan",
            role = c("aut", "cre"),
-           email = "olinehan@gmail.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           email = "olinehan@gmail.com")
 Description: A collection of functions that I have made during labs in Stat 302. The purpose of this 
              package is to demonstrate what I have learned from this course.
 License: GPL-3
@@ -22,4 +21,5 @@ Config/testthat/edition: 3
 Depends: 
     R (>= 2.10)
 VignetteBuilder: knitr
-Imports: tibble
+Imports: tibble,
+         dplyr

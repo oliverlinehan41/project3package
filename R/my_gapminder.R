@@ -17,6 +17,7 @@
 #'
 #' The supplemental data frame \code{\link[gapminder]{gapminder_unfiltered}} was not
 #' filtered on \code{year} or for complete data and has 3313 rows.
+#'
 #' @source \url{http://www.gapminder.org/data/}
 #' @seealso \code{\link[gapminder]{country_colors}} for a nice color scheme for the countries
 #' @importFrom tibble tibble

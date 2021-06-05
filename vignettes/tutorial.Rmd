@@ -45,3 +45,31 @@ Finally, I will do a one-sided t-test on the same data, where the alternative hy
 my_t_test(gapminder$lifeExp, "greater", 60)
 ```
 The p-value from this test is ~0.95. This means that if we assume that the average life expectancy is 60 years, we would expect that around 95% of samples of the same size would have a higher average life expectancy value than we obtained. With an alpha cutoff of 0.05, this is not sufficient evidence to reject the null hypothesis that the average life expectancy is 60 years.
+
+
+
+Another function in project3package is the my_lm function. This function allows you to build a linear model for a set of data. For example, the following code builds a linear model of how GDP per capita and continent correlate with life expectency in the gapminder data.
+
+```{r}
+my_lm(lifeExp ~ gdpPercap + continent, gapminder)
+
+
+```
+The "estimate" value is the linear coefficient for each variable. For gdpPercap, for example, the coefficient is 4.45 * 10^-4. This means that all else being equal, a $10,000 increase in GDP per capita would mean that our predicted life expectency would increase by 4.45 years. For a hypothesis test, our null hypothesis would be that GDP per capita and life expectency do not have a relationship, which means that our linear coefficient for gdpPercap would be 0. Our alternative hypothesis is that gdpPercap and life expectency do have a relationship. The p-value for the linear coefficient for gdpPercap is 8.55*10^-73, which is very small. This means that if our true coefficient is 0, only an astronomically tiny proportion of samples would have a more extreme coefficient, in either direction. With a cutoff of 0.05, we can conclude that there is evidence to support a relationship between GDP per capita and life expectancy. 
+
+To examine the effectiveness of the model, we can plot the estimated/fitted values for life expectancy with the actual values from the gapminder data.
+
+```{r}
+library(ggplot2)
+fit_mod <- fitted(lm(lifeExp ~ gdpPercap + continent, gapminder))
+lm_df <- data.frame(actual = gapminder$lifeExp, fitted = fit_mod)
+ggplot(lm_df, aes(x = fitted, y = actual)) +
+  geom_point()+
+  geom_abline(slope = 1, intercept = 0, col = "blue", lty = 2) +
+  theme_bw() +
+  labs(x = "Fitted Values", y = "Actual Values", title = "Actual vs. Fitted") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+
+```
+As demonstrated by the deviation of a linear pattern between fitted and actual values, this model is not a good fit for the data. When the predicted life expectancy is greater than 70 and less than 85, the model does pretty well, but when it's less than 70, or greater than 85, the model pretty much completely loses any accuracy.

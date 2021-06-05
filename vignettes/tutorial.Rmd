@@ -24,3 +24,24 @@ devtools::install_github("oliverlinehan41/project3package")
 library(project3package)
 ```
 
+One function in this package is the my_t_test function. This is a function that allows the user to perform a t_test on a set of data. First, I will demonstrate a two-sided t-test on the gapminder data regarding life-expectancy. 
+
+```{r}
+library(gapminder)
+my_t_test(gapminder$lifeExp, "two.sided", 60)
+```
+The p-value from this test is ~ 0.09. This means that if we assume that the average life expectancy is 60 years, we could expect around 9% of samples of the same size to have a more extreme average life expectency value than we obtained, in either direction. With an alpha cutoff of 0.05, this is not significant enough to reject the null hypothesis that the average life expectancy is 60 years.
+
+Next, I will do a one sided t-test on the same data, where the alternative hypothesis is that the average life expectancy is less than 60 years.
+
+```{r}
+my_t_test(gapminder$lifeExp, "less", 60)
+```
+The p-value from this test is ~ 0.047. This means that if we assume that the average life expectancy is 60 years, we would expect that around 4.7% of samples of the same size would have a lower average life expectancy value than we obtained. With an alpha cutoff of 0.05, this is significant enough to reject the null hypothesis that the average life expectancy is 60 years, as it is likely lower.
+
+Finally, I will do a one-sided t-test on the same data, where the alternative hypothesis is that the average life expectancy is greater than 60 years.
+
+```{r}
+my_t_test(gapminder$lifeExp, "greater", 60)
+```
+The p-value from this test is ~0.95. This means that if we assume that the average life expectancy is 60 years, we would expect that around 95% of samples of the same size would have a higher average life expectancy value than we obtained. With an alpha cutoff of 0.05, this is not sufficient evidence to reject the null hypothesis that the average life expectancy is 60 years.

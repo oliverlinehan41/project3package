@@ -24,4 +24,5 @@ VignetteBuilder: knitr
 Imports: tibble,
          dplyr,
          palmerpenguins,
-         gapminder
+         gapminder,
+         ggplot2

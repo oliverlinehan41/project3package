@@ -78,6 +78,7 @@ Another function in project3package is the my_knn_cv() function. This function a
 using k-nearest-neighbors. The training data is divided into folds. Each fold is used as test data once, with the other folds used as training data. The model predicts the class of the test data observations using the training data observations. This is useful, as merely relying on the data at hand to predict itself ends up being too optimistic, as the k with the lowest training error will actually create an overfit model, which describes the data well, but isn't as good at predicting new data. The k with the lowest CV error doesn't fit the data itself as well, but is more reliable when it comes to predicting new data. For example, the following code performs the above on the penguins data for k=1 through k=10. The output is a vector of the cross-validation error for each value of k. For cross validation, the data is divided into a chosen number of folds (5 in the following case).
 
 ```{r}
+library(class)
 cverr <- vector(mode = "numeric", length = 10)
 for(m in 1:10) {
   x <- my_knn_cv(my_penguins, my_penguins$species, m, 5)

@@ -79,6 +79,7 @@ using k-nearest-neighbors. The training data is divided into folds. Each fold is
 
 ```{r}
 library(class)
+library(dplyr)
 cverr <- vector(mode = "numeric", length = 10)
 for(m in 1:10) {
   x <- my_knn_cv(my_penguins, my_penguins$species, m, 5)

@@ -120,4 +120,4 @@ for (q in 1:10) {
 train_err
 
 ```
-Based on the training error, I would choose k = 2, as it has the lowest training error. However, using CV error, I would choose k = 1, as that has the lowest CV error. In practice, I would choose k = 1, as k = 2 would be overfit. In other words, k = 2 fits the training data better than k = 1, however, it is less robust than k = 1 when it comes to predicting new data. Thus, as knn is used for prediction, it makes more sense to choose k = 1. 
+Based on the training error, I would choose k = 2, as it has the lowest training error. However, using CV error, I would choose k = 1, as that has the lowest CV error. In practice, I would choose k = 1, as k = 2 would be overfit. In other words, k = 2 fits the training data better than k = 1, however, it is less robust than k = 1 when it comes to predicting new data. Thus, as knn is used for prediction, it makes more sense to choose k = 1. y

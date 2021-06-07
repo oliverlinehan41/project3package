@@ -73,3 +73,49 @@ ggplot(lm_df, aes(x = fitted, y = actual)) +
 
 ```
 As demonstrated by the deviation of a linear pattern between fitted and actual values, this model is not a good fit for the data. When the predicted life expectancy is greater than 70 and less than 85, the model does pretty well, but when it's less than 70, or greater than 85, the model pretty much completely loses any accuracy.
+
+Another function in project3package is the my_knn_cv() function. This function allows the user to perform cross-validation on training data in order to determine which k-value allows for the best predictive model,
+using k-nearest-neighbors. The training data is divided into folds. Each fold is used as test data once, with the other folds used as training data. The model predicts the class of the test data observations using the training data observations. This is useful, as merely relying on the data at hand to predict itself ends up being too optimistic, as the k with the lowest training error will actually create an overfit model, which describes the data well, but isn't as good at predicting new data. The k with the lowest CV error doesn't fit the data itself as well, but is more reliable when it comes to predicting new data. For example, the following code performs the above on the penguins data for k=1 through k=10. The output is a vector of the cross-validation error for each value of k. For cross validation, the data is divided into a chosen number of folds (5 in the following case).
+
+```{r}
+cverr <- vector(mode = "numeric", length = 10)
+for(m in 1:10) {
+  x <- my_knn_cv(my_penguins, my_penguins$species, m, 5)
+  cverr[m] <- x[2]
+}
+cverr
+
+```
+The following code will produce the training error, or the error when we use the training data as the test data.
+
+```{r}
+
+
+train_err <- vector(mode = "numeric", length = 10)
+nn_class <- vector(mode = "character")
+for (q in 1:10) {
+  nn <- my_knn_cv(my_penguins, my_penguins$species, q, 5)
+  nn_class <- unlist(nn[1])
+  
+  train_correct <- vector(mode = "numeric", length = length(nn_class))
+  
+  for (w in 1:length(nn_class)) {
+    if (nn_class[w] == my_penguins$species[w]) {
+      train_correct[w] <- 0
+      
+    }
+    else {
+      train_correct[w] <- 1
+    }
+    
+  }
+  
+  train_err[q] <- mean(train_correct)
+  
+  
+  
+}
+train_err
+
+```
+Based on the training error, I would choose k = 2, as it has the lowest training error. However, using CV error, I would choose k = 1, as that has the lowest CV error. In practice, I would choose k = 1, as k = 2 would be overfit. In other words, k = 2 fits the training data better than k = 1, however, it is less robust than k = 1 when it comes to predicting new data. Thus, as knn is used for prediction, it makes more sense to choose k = 1. 

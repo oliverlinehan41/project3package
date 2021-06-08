@@ -146,7 +146,7 @@ ggplot(data = rf_df, aes(x = reorder(folds, -mean_cv_se), y = mean_cv_se)) +
   labs(title = "Mean Cross-Validation Standard Error of K folds",
        x = "Number of Folds",
        y = "Mean Cross-Validation Standard Error") +
-  theme(plot.title = element_text(hjust = 0.5, size = 12),
+  theme(plot.title = element_text(hjust = 0.5, size = 8),
         axis.title.x = element_text(size = 10),
         axis.title.y = element_text(size = 10))
 

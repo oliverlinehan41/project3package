@@ -25,4 +25,5 @@ Imports: tibble,
          dplyr,
          palmerpenguins,
          gapminder,
-         ggplot2
+         ggplot2,
+         randomForest

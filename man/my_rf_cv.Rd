@@ -17,6 +17,7 @@ number of folds.
 This function performs cross validation for values of k in random forest.
 }
 \examples{
+library(randomForest)
 my_rf_cv(2)
 my_rf_cv(10)
 

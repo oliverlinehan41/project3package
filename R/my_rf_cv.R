@@ -8,6 +8,7 @@
 #'   number of folds.
 #'
 #' @examples
+#' library(randomForest)
 #' my_rf_cv(2)
 #' my_rf_cv(10)
 #'

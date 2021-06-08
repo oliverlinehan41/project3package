@@ -62,7 +62,7 @@ To examine the effectiveness of the model, we can plot the estimated/fitted valu
 ```{r}
 library(ggplot2)
 fit_mod <- fitted(lm(lifeExp ~ gdpPercap + continent, my_gapminder))
-lm_df <- data.frame(actual = gapminder$lifeExp, fitted = fit_mod)
+lm_df <- data.frame(actual = my_gapminder$lifeExp, fitted = fit_mod)
 ggplot(lm_df, aes(x = fitted, y = actual)) +
   geom_point()+
   geom_abline(slope = 1, intercept = 0, col = "blue", lty = 2) +

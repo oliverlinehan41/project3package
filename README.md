@@ -19,6 +19,7 @@ You can install the released version of project3package from [CRAN](https://CRAN
 ``` r
 install.packages("project3package")
 ```
+## Use
 
 To view the vignette:
 ``` r

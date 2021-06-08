@@ -10,7 +10,7 @@
 #'   of those coefficients, the t-value, and the p-value for each variable.
 #'
 #' @example
-#' my_lm(lifeExp ~ gdpPercap + continent, gapminder)
+#' my_lm(lifeExp ~ gdpPercap + continent, my_gapminder)
 #'
 #' @keywords
 #' inference

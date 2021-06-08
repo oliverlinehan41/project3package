@@ -22,8 +22,8 @@ string representing the type of t-test performed, and the numeric p-value.
 This function performs a t-test on a data vector.
 }
 \examples{
-my_t_test(gapminder$lifeExp, "greater", 60)
-my_t_test(gapminder$lifeExp, "two.sided", 60)
+my_t_test(my_gapminder$lifeExp, "greater", 60)
+my_t_test(my_gapminder$lifeExp, "two.sided", 60)
 
 }
 \keyword{inference}

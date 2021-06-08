@@ -25,8 +25,8 @@ Function performs cross validation to determine appropriate "k"
 for k-nearest-neighbors.
 }
 \examples{
-my_knn_cv(penguins, penguins$species, 1, 5)
-my_knn_cv(penguins, penguins$species, 5, 5)
+my_knn_cv(my_penguins, my_penguins$species, 1, 5)
+my_knn_cv(my_penguins, my_penguins$species, 5, 5)
 
 }
 \keyword{prediction}

@@ -18,10 +18,10 @@
 my_rf_cv <- function(k) {
 
   # Creates dataframe and assigns folds
-  rf_dta <- data.frame("mass" = penguins$body_mass_g,
-                       "bill_lng" = penguins$bill_length_mm,
-                       "bill_dpt" = penguins$bill_depth_mm,
-                       "flip_lng" = penguins$flipper_length_mm)
+  rf_dta <- data.frame("mass" = my_penguins$body_mass_g,
+                       "bill_lng" = my_penguins$bill_length_mm,
+                       "bill_dpt" = my_penguins$bill_depth_mm,
+                       "flip_lng" = my_penguins$flipper_length_mm)
   rf_dta <- na.omit(rf_dta)
   fold <- sample(rep(1:k, length = nrow(rf_dta)))
   rf_dta$fold <- fold

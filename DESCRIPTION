@@ -26,4 +26,5 @@ Imports: tibble,
          palmerpenguins,
          gapminder,
          ggplot2,
-         randomForest
+         randomForest,
+         class

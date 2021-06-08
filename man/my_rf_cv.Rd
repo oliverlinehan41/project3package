@@ -18,6 +18,7 @@ This function performs cross validation for values of k in random forest.
 }
 \examples{
 library(randomForest)
+library(dplyr)
 my_rf_cv(2)
 my_rf_cv(10)
 

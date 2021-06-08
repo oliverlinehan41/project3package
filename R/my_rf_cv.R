@@ -9,6 +9,7 @@
 #'
 #' @examples
 #' library(randomForest)
+#' library(dplyr)
 #' my_rf_cv(2)
 #' my_rf_cv(10)
 #'

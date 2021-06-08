@@ -14,6 +14,7 @@
 #'
 #' @examples
 #' library(dplyr)
+#' library(class)
 #' my_knn_cv(my_penguins, my_penguins$species, 1, 5)
 #' my_knn_cv(my_penguins, my_penguins$species, 5, 5)
 #'

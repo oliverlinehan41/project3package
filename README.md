@@ -3,6 +3,11 @@
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/oliverlinehan41/project3package/workflows/R-CMD-check/badge.svg)](https://github.com/oliverlinehan41/project3package/actions)
+
+<a href="https://codecov.io/gh/oliverlinehan41/project3package">
+<img src="https://codecov.io/gh/oliverlinehan41/project3package/branch/master/graph/badge.svg?token=93GFV9VC0C"/>
+      </a>
+    
 <!-- badges: end -->
 
 The goal of project3package is to demonstrate knowledge of concepts I learned throughout the Stat 302 course.

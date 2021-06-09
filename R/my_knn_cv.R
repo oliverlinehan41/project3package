@@ -24,6 +24,7 @@
 #' @export
 my_knn_cv <- function(train, cl, k_nn, k_cv) {
 
+  library(dplyr)
   # Generates random set of numbers between 1 and k_cv
   n <- nrow(train)
   fold <- sample(rep(1:k_cv, length = n))

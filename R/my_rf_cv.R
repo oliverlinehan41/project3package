@@ -19,6 +19,7 @@
 #' @export
 my_rf_cv <- function(k) {
 
+  library(randomForest)
   # Creates dataframe and assigns folds
   rf_dta <- data.frame("mass" = my_penguins$body_mass_g,
                        "bill_lng" = my_penguins$bill_length_mm,

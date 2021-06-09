@@ -5,3 +5,4 @@ test_that("multiplication works", {
 test_that("Function returns double", {
   expect_type(object = my_lm(lifeExp ~ gdpPercap + continent, my_gapminder), type = "double")
 })
+

@@ -19,5 +19,9 @@ of those coefficients, the t-value, and the p-value for each variable.
 \description{
 This function applies a linear model to a set of data, and returns the results.
 }
+\examples{
+my_lm(lifeExp ~ gdpPercap + continent, my_gapminder)
+
+}
 \keyword{inference}
 \keyword{prediction}

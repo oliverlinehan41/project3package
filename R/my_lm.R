@@ -9,7 +9,7 @@
 #' @return A table displaying the linear coefficients, the standard error
 #'   of those coefficients, the t-value, and the p-value for each variable.
 #'
-#' @example
+#' @examples
 #' my_lm(lifeExp ~ gdpPercap + continent, my_gapminder)
 #'
 #' @keywords

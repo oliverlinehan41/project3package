@@ -40,7 +40,7 @@ my_rf_cv <- function(k) {
     data_test <- rf_dta %>% filter(fold == i)
 
     # Predicts body mass
-    Model <- randomForest(my_penguins$body_mass_g ~ bill_lng + bill_dpt + flip_lng,
+    Model <- randomForest(mass ~ bill_lng + bill_dpt + flip_lng,
                           data = data_train,
                           ntree = 100)
     Predictions <- predict(Model, data_test[, c(2:4)])

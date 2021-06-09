@@ -5,3 +5,4 @@ test_that("multiplication works", {
 test_that("function returns double", {
   expect_type(object = my_rf_cv(5), type = "double")
 })
+
